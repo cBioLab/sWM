@@ -1,0 +1,25 @@
+#!/bin/bash
+
+path="../data/server/"
+port=23456
+core=8
+sigma=(4 8 16 32 64 128 256 512 1024)
+resultfile="../data/sWM_stime.dat"
+
+rm -f $resultfile
+
+for i in ${sigma[@]}
+do
+	f="$path$i.wm"
+	if [ ! -e $f ]; then
+		../data/bin/strtowav.sh < ../data/sequence/n10000s${i}.seq > ${f}
+	fi
+done
+
+for i in ${sigma[@]}
+do
+	filename="$path$i.wm"
+	result=`./server -p $port -f $filename -c $core`
+	echo "$i $result" >> $resultfile
+	port=`expr $port + 1`
+done

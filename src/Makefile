@@ -26,6 +26,7 @@ clean:
 
 server: $(SERVER_OBJS) $(MCL_LIB) 
 	$(CXX) $(SERVER_OBJS) -o $@ $(LDFLAGS) -fopenmp
+	mkdir -p $(TOPDIR)../bin/
 	mv server $(TOPDIR)../bin/
 	mkdir -p $(TOPDIR)../comm/
 	mkdir -p $(TOPDIR)../comm/server
@@ -33,6 +34,7 @@ server: $(SERVER_OBJS) $(MCL_LIB)
 
 client: $(CLIENT_OBJS) $(MCL_LIB) 
 	$(CXX) $(CLIENT_OBJS) -o $@ $(LDFLAGS) -fopenmp
+	mkdir -p $(TOPDIR)../bin/
 	mv client $(TOPDIR)../bin/
 	mkdir -p $(TOPDIR)../comm/
 	mkdir -p $(TOPDIR)../comm/server
@@ -40,6 +42,7 @@ client: $(CLIENT_OBJS) $(MCL_LIB)
 
 wav_main: $(WAV_OBJS) $(MCL_LIB) 
 	$(CXX) $(WAV_OBJS) -o $@ $(LDFLAGS) -fopenmp
+	mkdir -p $(TOPDIR)../bin/
 	mv wav_main $(TOPDIR)../bin/
 
 tool:

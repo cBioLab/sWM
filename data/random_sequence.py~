@@ -1,9 +1,0 @@
-import random
-
-sigma = int(input())
-n = int(input())
-
-print(n)
-print(sigma)
-for i in range(n-1):
-    print(str(random.randint(1, sigma-1))+" ",end="")

@@ -1,4 +1,0 @@
-#!/bin/sh
-
-dirpath=`dirname $0`
-./bwt | ./makeWM

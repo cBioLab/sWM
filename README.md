@@ -29,9 +29,8 @@ Create a working directory (e.g., work) and clone the following repositories.
 * OpenSSL and libgmp-dev are available via apt-get (or other similar commands).
 
 # Installation
-
-  cd sWM/src
-  make
+		cd sWM/src
+		make
 
 * use tcmalloc (optimal) for Linux; sudo apt-get install libgoogle-perftools-dev
 
@@ -51,8 +50,8 @@ Client:
 		./client -c <num_of_threads> -h <hostname> -f ../data/client/sample.que -p <port number>
 
 # Making WM file
-     cd sWM/tool/bin
-     ./strtowav.sh < <sequence file> > <WM file>
+		cd sWM/tool/bin
+		./strtowav.sh < <sequence file> > <WM file>
 
 # Sequence file format
  	   1st line	 : The length of this sequence data
@@ -60,7 +59,6 @@ Client:
 	   3rd line  : Sequence data
 
 # Query file format
-
 	   1st line	 : The length of this query data
 	   2nd line	 : The number of comunications per one character
 	   3rd line  : Query data

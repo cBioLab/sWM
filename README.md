@@ -65,8 +65,7 @@ Client:
 
 # Data format
 Both query and sequence data should be described as a series of numbers. A space is used as a delimiter.
-	e.g., 1 2 15 4 2 1 3
-
+           e.g., 1 2 15 4 2 1 3
 
 # Copyright Notice
 Copyright (C) 2016, cBioLab

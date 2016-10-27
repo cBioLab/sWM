@@ -54,13 +54,13 @@ Client:
 		./strtowav.sh < <sequence file> > <WM file>
 
 # Sequence file format
- 	   1st line	 : The length of this sequence data
+ 	   1st line	 : The length of the sequence data
 	   2nd line	 : The alpabet size of this sequence data 
 	   3rd line  : Sequence data
 
 # Query file format
-	   1st line	 : The length of this query data
-	   2nd line	 : The number of communications per one character (  )
+	   1st line	 : The length of the query data
+	   2nd line	 : The alpabet size of this query data   
 	   3rd line  : Query data
 
 # Copyright Notice

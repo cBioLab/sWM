@@ -21,10 +21,16 @@ void WAVM::Client::setParam(std::string file, char *pubkf, char *prvkf)
 		prv.setCache(0, L0+1);
 }
 
-void WAVM::Client::setQuery(std::string qfile,std::string qlenfile){
-	std::ifstream ifs(qfile.c_str(), std::ios::binary);
+void WAVM::Client::setQuery(std::string qfile,std::string qlenfile)
+{
+        std::ifstream ifs(qfile.c_str(), std::ios::binary);
+	double sigma;
 	ifs>>query_len;
-	ifs>>lg_sigma;
+	//ifs>>lg_sigma;
+	ifs>>sigma;
+	lg_sigma = log(sigma)/log(2);
+	if(sigma-pow(2,lg_sigma)>0)
+	  lg_sigma++;
 	std::cerr <<"q_len="<<query_len<<" lg_sigma="<<lg_sigma<<std::endl;
 	query.resize(query_len);
 	for(int i=0;i<query_len;i++){

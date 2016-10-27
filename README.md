@@ -60,7 +60,7 @@ Client:
 
 # Query file format
 	   1st line	 : The length of this query data
-	   2nd line	 : The number of comunications per one character
+	   2nd line	 : The number of communications per one character (  )
 	   3rd line  : Query data
 
 # Copyright Notice

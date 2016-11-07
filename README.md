@@ -5,6 +5,8 @@ C++ implementation of sWM
 # Summary
 This library is the implementation of sWM. 
 
+* H. Sudo, M. Jimbo, K. Nuida and K. Shimizu, Secure Wavelet Matrix: Alphabet-Friendly Privacy-Preserving String Search, [doi: http://dx.doi.org/10.1101/085647](http://biorxiv.org/content/early/2016/11/04/085647.article-metrics)
+
 # List of Supported CPUs and Operating Systems
 * Intel 64-bit CPUs
 * 64-bit Linux (tested on ubuntu 14.04 LTS and ubuntu 16.04 LTS)
